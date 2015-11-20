@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="hidden"/>
+		<field name="name" type="text" label="COM_SEXYCONTACTFORM_NAME_LABEL" description="COM_SEXYCONTACTFORM_NAME_DESCRIPTION" size="40" class="inputbox" default="" required="required"/>
+		<field name="id_form" type="sql" default="1" label="COM_SEXYCONTACTFORM_FORM_LABEL" description="COM_SEXYCONTACTFORM_TEMPLATE_DESCRIPTION" query="SELECT name, id FROM #__sexy_forms WHERE published != '-2'" key_field="id" value_field="name" />
+		<field id="id_type" name="id_type" type="sql" label="COM_SEXYCONTACTFORM_TYPE_LABEL" description="COM_SEXYCONTACTFORM_TYPE_DESCRIPTION"  default="1" query="SELECT name, id FROM #__sexy_field_types" key_field="id" value_field="name" />
+		<field name="required"  type="radio" class="btn-group" default="0" label="COM_SEXYCONTACTFORM_REQUIRED_LABEL" description="COM_SEXYCONTACTFORM_REQUIRED_DESCRIPTION">
+			<option value="0">COM_SEXYCONTACTFORM_SNO</option>
+			<option value="1">COM_SEXYCONTACTFORM_SYES</option>
+		</field>
+		<field id="published" name="published" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<field name="created" type="calendar" label="COM_SEXYCONTACTFORM_CREATED_LABEL" default="NOW"  description="COM_SEXYCONTACTFORM_CREATED_DESCRIPTION" class="inputbox" size="22" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+	</fieldset>
+</form>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>Sexy Contact Form</name>
+    <creationDate>June 2012</creationDate>
+    <author>2GLux Company</author>
+    <copyright>Copyright (©) 2008-2013 2GLux company. All rights reserved.</copyright>
+    <authorEmail>info@2glux.com</authorEmail>
+    <authorUrl>http://2glux.com</authorUrl>
+    <version>0.9.2</version>
+    <license>GNU/GPL</license>
+    <description>COM_SEXYCONTACTFORM_DESCRIPTION</description>
+    
+    <scriptfile>scriptfile.php</scriptfile>
+
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/install.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">install/sql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<!-- user part -->
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>router.php</filename>
+        <filename>sexycontactform.php</filename>
+        <filename>sendmail.php</filename>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>assets</folder>
+    </files>
+	
+    <!-- administration part -->
+    <administration>
+	    <menu view="cpanel" img="components/com_sexycontactform/assets/images/project_16.png">COM_SEXYCONTACTFORM_MENU</menu>
+	    <submenu>
+		</submenu>
+	    <files folder="admin">
+	        <filename>controller.php</filename>
+	        <filename>sexycontactform.php</filename>
+	        <filename>config.xml</filename>
+	        <filename>index.html</filename>
+			
+	        <folder>install</folder>
+	        <folder>assets</folder>
+	        <folder>helpers</folder>
+	        <folder>models</folder>
+	        <folder>tables</folder>
+	        <folder>views</folder>
+	        <folder>controllers</folder>
+	        <folder>elements</folder>
+	        <folder>fields</folder>
+	    </files>
+	    
+	   	<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_sexycontactform.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_sexycontactform.sys.ini</language>
+		</languages>
+    </administration>
+</extension>

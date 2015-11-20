@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.x" type="plugin" group="system" method="upgrade">
+	<name>System - Advanced Google Analytics</name>
+	<author>www.deconf.com</author>
+	<creationDate>Apr 2013</creationDate>
+	<copyright>Copyright (C) 2010 www.deconf.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorUrl>http://www.deconf.com/</authorUrl>
+	<version>1.3</version>
+    <description>ADVGA_DESC</description>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_system_advga.ini</language>
+	</languages>	
+	<files>
+		<filename plugin="advga">advga.php</filename>
+		<filename plugin="advga">index.html</filename>
+	</files>
+	<config>
+	  <fields name="params" addfieldpath="/plugins/system">
+	  	<fieldset name="basic">
+		  <field name="spacer1" type="spacer" default="" label="ADVGA_SETTINGS" description="" />  
+		  <field name="advga_googleid" type="text" default="" label="ADVGA_GOOGLEID" description="ADVGA_GOOGLEID_D"/>
+		  <field name="advga_domain" type="text" default="" label="ADVGA_DOMAIN" description="ADVGA_DOMAIN_D"/>
+		  <field name="advga_trackmode" type="list" default="0" label="ADVGA_TRACKMODE" description="ADVGA_TRACKMODE_D">
+			<option value="0">ADVGA_SINGLEDOMAIN</option>
+			<option value="1">ADVGA_SUBDOMAINS</option>
+			<option value="2">ADVGA_MULTIDOMAINS</option>
+		  </field>
+		  <field name="spacer2" type="spacer" default="" label="ADVGA_CUSTOM" description="" />		  
+		  <field name="advga_categories" type="list" default="0" label="ADVGA_CATEGORIES" description="ADVGA_CATEGORIES_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>
+		  <field name="advga_authors" type="list" default="0" label="ADVGA_AUTHORS" description="ADVGA_AUTHORS_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>
+		  <field name="advga_pubyear" type="list" default="0" label="ADVGA_PUBYEAR" description="ADVGA_PUBYEAR_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>
+		  <field name="advga_usertype" type="list" default="0" label="ADVGA_USERTYPE" description="ADVGA_USERTYPE_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>	
+		  <field name="@spacer4" type="spacer" default="ADVGA_EVENTS" label="" description="" />		  		  
+		  <field name="advga_event" type="list" default="0" label="ADVGA_EVENT" description="ADVGA_EVENT_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>
+		  <field name="advga_downloadf" type="text" size="70" default="/\.pdf$|\.zip$|\.rar$|\.od*|\.doc*|\.xls*|\.ppt*|\.exe$|\.dmg$|\.mov$|\.avi$|\.mp3$/i" label="ADVGA_DOWNLOADF" description="ADVGA_DOWNLOADF_D" />		  
+		  <field name="spacer3" type="spacer" default="" label="ADVGA_OTHER" description="" />		  
+		  <field name="advga_anonim" type="list" default="0" label="ADVGA_ANONIM" description="ADVGA_ANONIM_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>
+		  <field name="advga_trackadmin" type="list" default="1" label="ADVGA_TRACKADMIN" description="ADVGA_TRACKADMIN_D">
+	  		<option value="0">ADVGA_NO</option>
+			<option value="1">ADVGA_YES</option>
+		  </field>		  
+        </fieldset>		
+	  </fields>
+	</config>		
+</extension>

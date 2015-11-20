@@ -1,0 +1,79 @@
+.sexycontactform_wrapper {
+	width: 98%;
+	margin: 8px auto 8px;
+	padding: 0;
+	position: relative;;
+}
+.sexycontactus_field_name {
+	display: block;
+}
+.sexycontactform_wrapper_inner {
+	position: relative;
+}
+.sexycontactform_form {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.sexycontactform_title {
+	margin: 0 0 0 0;
+	font-family: inherit;
+	padding: 0;
+	line-height: 25px;
+}
+.sexycontactform_send,.sexycontactform_send_new {
+	cursor: pointer;
+	outline: none;
+}
+
+.sexycontactform_input_element {
+	display: block;
+	padding: 3px 5px;
+	margin: 0;
+	outline: none;
+}
+textarea.sexycontactform_input_element {
+	resize: none;
+}
+
+.sexycontactform_field_box {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+.sexycontactform_field_name {
+	display: block;
+	padding: 0;
+}
+.sexycontactform_submit_wrapper {
+	position: relative;
+}
+.sexycontactform_clear {
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.sexycontactform_loading_wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	box-shadow: inset 0 0 100px 19px black;
+	-webkit-box-shadow: inset 0 0 100px 19px black;
+	-moz-box-shadow: inset 0 0 100px 19px black;
+	background-color: #fff;
+	display: none;
+	z-index: 100;
+}

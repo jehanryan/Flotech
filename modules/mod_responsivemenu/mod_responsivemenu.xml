@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/module-install.dtd">
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>Responsive Menu</name>
+	<author>Cecil Gupta</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C) Cecil Gupta. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>cecilgupta@gmail.com</authorEmail>
+	<authorUrl>www.AddonStreet.com</authorUrl>
+	<version>1.2</version>
+	<description>Responsive Menus for Joomla</description>
+	<files>
+		<filename module="mod_responsivemenu">mod_responsivemenu.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_responsivemenu.xml</filename>
+		<filename>en-GB.mod_responsivemenu.ini</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_responsivemenu.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field name="menutype" type="menu" label="Select Menu" description="Select the Menu you want to use" /> 
+
+				<field name="startLevel" type="list" default="1" label="Start Level" description="Level to start rendering the menu at. Setting the start and end levels to the same # and setting 'Show Sub-menu Items' to yes will only display that single level" >
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field name="endLevel" type="list" default="0" label="End Level" description="Level to stop rendering the menu at. If you choose 'All', all levels will be shown depending on 'Show Sub-menu Items' setting" >
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field name="subItemWidth" type="text" default="150" label="Width of Menu Sub Items" description="Width of sub Item Width" />
+				
+				<field name="showAllChildren" type="radio" default="1" label="Show Sub-menu Items" description="Expand the menu and make its sub-menu items always visible"> 
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="myspacer" label="&lt;b style='background:#FAFAFA;display:block;color:#025A8D;border:solid 1px #ccc; padding:2px; width:400px;' &gt;Color Styling - ( put hex values without # ) &lt;/b&gt;" />
+				
+				<field name="MenuBG" type="text" default="333333" label="Menu Background" description="The background of Menu Top level" />
+				<field name="MenuBG2" type="text" default="3d3d3d" label="Menu Level 2 Background" description="The background of Menu Second level" />
+				<field name="MenuBG3" type="text" default="555555" label="Menu Level 3 Background" description="The background of Menu Third level" />
+				<field name="MenuHoverBGClr" type="text" default="999999" label="Menu Color on Hover" description="Put the color you wish to use on Menu items while hovering." /> 
+				<field name="outlineClr" type="text" default="666666" label="OutLine Color" description="Menu border color, there is a subtle border, you can choose its color." />
+				
+				<field name="linksClr" type="text" default="F4F4F4" label="Menu Text Color" description="Text color of Menu Items" /> 
+				<field name="linksHoverClr" type="text" default="000000" label="Text Color on hover" description="Text color to use on menu hover" />
+				
+				<field name="jQuery" type="list" default="1" description="Select Yes to load fresh jquery library instance. Joomla 3 is supposed to have jQuery already" label="Load jQuery Library" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">				
+				<field name="class_sfx" type="text" label="Menu Class Suffix" description="A suffix to be applied to the CSS class of the menu items" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" /> 
+
+
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option> 
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" /> 
+
+				<field name="cachemode" type="hidden" default="itemid"> 
+					<option value="itemid"></option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
